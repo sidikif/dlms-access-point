@@ -1,7 +1,7 @@
 version: "2.4"
 services:
     access-point:
-        image: beroset/dlms-access-point
+        image: sidikif/dlms-access-point
         entrypoint: 
             - /usr/local/bin/docker-entrypoint.sh
             - "access-point"
@@ -23,7 +23,7 @@ services:
             net.ipv6.conf.all.forwarding: 1
 
     hes:
-        image: beroset/dlms-access-point
+        image: sidikif/dlms-access-point
         entrypoint: 
             - /usr/local/bin/HESsim
             - 2001:3200:3201::100:101
@@ -38,7 +38,7 @@ services:
             net.ipv6.conf.all.disable_ipv6: 0
 
     meter:
-        image: beroset/dlms-access-point
+        image: sidikif/dlms-access-point
         entrypoint: 
             - /usr/local/bin/docker-entrypoint.sh
             - "meter"
@@ -54,7 +54,7 @@ services:
             net.ipv6.conf.all.disable_ipv6: 0
 
     dashboard:
-        image: beroset/dlms-access-point-dashboard
+        image: sidikif/dlms-access-point-dashboard
         ports:
             - "8081:80"
         networks:
@@ -64,7 +64,7 @@ services:
             net.ipv6.conf.all.disable_ipv6: 0
 
     docs:
-        image: beroset/dlms-access-point-docs
+        image: sidikif/dlms-access-point-docs
         ports:
             - "8080:80"
         networks:
