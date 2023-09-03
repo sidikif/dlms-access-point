@@ -16,7 +16,7 @@ RUN dnf update -y \
 WORKDIR /tmp/
 # When the software repository is no longer private, this will work 
 # without requiring authentication:
-# RUN git clone --recurse-submodules https://github.com/epri-dev/dlms-access-point.git 
+# RUN git clone --recurse-submodules https://github.com/sidikif/dlms-access-point.git 
 ADD $projectsourcename.tar.gz .
 RUN mv $projectsourcename dlms-access-point && \
     mkdir dlms-access-point/build && \
